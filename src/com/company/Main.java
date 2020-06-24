@@ -45,6 +45,8 @@ public class Main {
         System.out.println("operasi pengurangan");
         System.out.print(number1+" - "+number2+" = ");
         System.out.println(number1-number2);
+        System.out.print(number2+" - "+number1+" = ");
+        System.out.println(number2-number1);
         //perkalian
         System.out.println("operasi perkalian");
         System.out.print(number1+" * "+number2+" = ");
