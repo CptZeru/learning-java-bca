@@ -3,6 +3,7 @@ package com.company;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.OptionalDouble;
 
 public class Main {
 
@@ -104,5 +105,63 @@ public class Main {
         //Task 4 - Session 3
         boolean QuestionAns1;
 
+        //Session 4
+        String passcode;
+        passcode = "La Li Lu Le Lo";
+        System.out.println();
+        System.out.println(passcode);
+
+        //Task 1 - Session 4
+        double[] pesanan = new double[] {20.000, 25.000, 22.000};
+        DecimalFormat df = new DecimalFormat("#.000");
+        double totalPesanan = 0;
+        for(int i = 0; i<pesanan.length; i++){
+            totalPesanan = totalPesanan + pesanan[i];
+        }
+        System.out.print("\nTotal Bayar : Rp ");
+        System.out.println(df.format(totalPesanan));
+        System.out.println();
+
+        //Task 2 - Session 4
+        String[] hewan = new String[] {"Kancil","Kambing","Singa", "Harimau", "Gajah"};
+        for(int i = 0; i<hewan.length; i++){
+            if(hewan[i]=="Kancil"){
+                System.out.println(hewan[i]+" adalah Hewan Cerdas");
+            }else if(hewan[i]=="Singa"){
+                System.out.println(hewan[i]+" adalah Sang Raja Hutan");
+            }else{
+                System.out.println(hewan[i]+" adalah Penghuni Hutan Biasa");
+            }
+        }
+        System.out.println();
+
+        //Task 3 - Session 4
+        int[] justNumber = new int[]{1,4,5,6,7,9,12};
+        for (int i = 0; i<justNumber.length; i++){
+            if(justNumber[i]%2==0){
+                System.out.println(justNumber[i]+" adalah Bilangan Genap");
+            }else if(justNumber[i]%2!=0){
+                System.out.println(justNumber[i]+" adalah Bilangan Ganjil");
+            }
+        }
+        System.out.println();
+
+        //Task 4 - Session 4
+        int[] steps = new int[]{2,4,6,8};
+        int totalSteps = Arrays.stream(steps).sum();
+        double averageSteps = Arrays.stream(steps).average().getAsDouble();
+        System.out.println("Total Steps : "+totalSteps+". Dari "+steps.length+" Orang");
+        System.out.println("Average Steps : "+averageSteps+". Dari "+steps.length+" Orang\n");
+
+        //Task 5 - Session 5
+        String[] NamaOrang = new String[] {"Ahmad", "Abrar", "Dimas", "Prasetyo", "Andi", "Ridho", "Ariyar"};
+        for(int i=0; i<NamaOrang.length;i++){
+            int NamaLength = NamaOrang[i].length();
+            if(NamaLength%2==0){
+                System.out.println(NamaOrang[i]+" : "+NamaLength+" Huruf. Jumlahnya Genap");
+            }else if(NamaLength%2!=0){
+                System.out.println(NamaOrang[i]+" : "+NamaLength+" Huruf. Jumlahnya Ganjil");
+            }
+        }
     }
 }
