@@ -1,5 +1,6 @@
 package com.company;
 
+import java.awt.image.AreaAveragingScaleFilter;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -153,7 +154,7 @@ public class Main {
         System.out.println("Total Steps : "+totalSteps+". Dari "+steps.length+" Orang");
         System.out.println("Average Steps : "+averageSteps+". Dari "+steps.length+" Orang\n");
 
-        //Task 5 - Session 5
+        //Task 5 - Session 4
         String[] NamaOrang = new String[] {"Ahmad", "Abrar", "Dimas", "Prasetyo", "Andi", "Ridho", "Ariyar"};
         for(int i=0; i<NamaOrang.length;i++){
             int NamaLength = NamaOrang[i].length();
@@ -161,6 +162,46 @@ public class Main {
                 System.out.println(NamaOrang[i]+" : "+NamaLength+" Huruf. Jumlahnya Genap");
             }else if(NamaLength%2!=0){
                 System.out.println(NamaOrang[i]+" : "+NamaLength+" Huruf. Jumlahnya Ganjil");
+            }
+        }
+
+        //Homework - Session 5
+        String[] column = new String[] {"No.","Nama","Alamat","Gender"};
+        String[][] data = new String[][] {{"1", "Peter P", "California", "Male"},
+                {"2","Jabukowski R", "California", "Male"},
+                {"3","Mark Watney", "Silicon Valley", "Male"},
+                {"4", "Arina Sanders", "Canada", "Female"},
+                {"5", "Matthew T", "New York", "Male"}};
+        System.out.println();
+        System.out.println("________________________");
+        for(int i =0; i<column.length;i++){
+            if(i==column.length-1){
+                System.out.print("|"+column[i]+"|\n");
+            }else{
+                System.out.print("|"+column[i]);
+            }
+        }
+        int dataCount = 0;
+        for(int j=0; j<data.length;j++){
+            dataCount++;
+            for(int k=0;k<data[j].length;k++){
+                if(k==data[j].length-1){
+                    System.out.print("|"+data[j][k]+"|\n");
+                }else{
+                    System.out.print("|"+data[j][k]);
+                }
+            }
+        }
+        System.out.println("________________________");
+        System.out.println("dataCount: "+dataCount);
+        System.out.println("________________________\n");
+        int GenderPosition = Arrays.asList(column).indexOf("Gender");
+        int NamePosition = Arrays.asList(column).indexOf("Nama");
+        for(int j=0; j<data.length;j++){
+            if(data[j][GenderPosition]=="Male"){
+                System.out.println(data[j][NamePosition]+" | Male");
+            }else if(data[j][GenderPosition]=="Female"){
+                System.out.println(data[j][NamePosition]+" | Female");
             }
         }
     }
