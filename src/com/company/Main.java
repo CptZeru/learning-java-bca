@@ -176,9 +176,9 @@ public class Main {
         System.out.println("________________________");
         for(int i =0; i<column.length;i++){
             if(i==column.length-1){
-                System.out.print("|"+column[i]+"|\n");
+                System.out.print("|  "+column[i]+"  |\n");
             }else{
-                System.out.print("|"+column[i]);
+                System.out.print("|  "+column[i]+"  ");
             }
         }
         int dataCount = 0;
@@ -186,9 +186,13 @@ public class Main {
             dataCount++;
             for(int k=0;k<data[j].length;k++){
                 if(k==data[j].length-1){
-                    System.out.print("|"+data[j][k]+"|\n");
+                    System.out.print("|  "+data[j][k]+"  |\n");
                 }else{
-                    System.out.print("|"+data[j][k]);
+                    if(k==0){
+                        System.out.print("|   "+data[j][k]+"   ");
+                    }else{
+                        System.out.print("|  "+data[j][k]+"  ");
+                    }
                 }
             }
         }
@@ -203,6 +207,74 @@ public class Main {
             }else if(data[j][GenderPosition]=="Female"){
                 System.out.println(data[j][NamePosition]+" | Female");
             }
+        }
+        System.out.println();
+
+        //Session 5 - Month
+        int months =1;
+        String month;
+        switch (months){
+            case 1:
+                month = "Januari";
+                break;
+            case 2:
+                month = "Februari";
+                break;
+            case 3:
+                month = "Maret";
+                break;
+            case 4:
+                month = "April";
+                break;
+            case 5:
+                month = "Mei";
+                break;
+            case 6:
+                month = "Juni";
+                break;
+            case 7:
+                month = "Juli";
+                break;
+            case 8:
+                month = "Agustus";
+                break;
+            case 9:
+                month = "September";
+                break;
+            case 10:
+                month = "Oktober";
+                break;
+            case 11:
+                month = "November";
+                break;
+            case 12:
+                month = "Desember";
+                break;
+            default:
+                month = "Unidentified Input";
+                break;
+        }
+        System.out.println(month);
+
+        //While
+        int counting = 1;
+        while(counting<=10){
+            System.out.println("While Counting");
+            System.out.println(counting);
+            counting++;
+        }
+        counting = 1;
+        System.out.println();
+        do{
+            System.out.println("Do-While Counting");
+            System.out.println(counting);
+            counting++;
+        }while (counting<=10);
+        System.out.println();
+        System.out.println("ForEach");
+        for (String datum:
+             column) {
+            System.out.println(datum);
         }
     }
 }
